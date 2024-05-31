@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beginner's Guide to Street Fighter 6</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #000;
+            color: #fff;
+            transition: all 0.5s ease;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding: 1rem 0;
+            text-align: center;
+            position: relative;
+        }
+        .theme-toggle-button {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: #333;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background 0.5s ease, color 0.5s ease;
+        }
+        section {
+            margin: 20px 0;
+            padding: 20px;
+            background: #000;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+            transition: background 0.5s ease, color 0.5s ease;
+        }
+        h2 {
+            color: #fff;
+        }
+        .collapsible {
+            background: #333;
+            color: #fff;
+            cursor: pointer;
+            padding: 10px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 18px;
+            transition: background 0.5s ease, color 0.5s ease;
+        }
+        .active, .collapsible:hover {
+            background-color: #555;
+        }
+        .content {
+            padding: 0 18px;
+            display: none;
+            overflow: hidden;
+            background-color: #000;
+            transition: background 0.5s ease, color 0.5s ease;
+        }
+        .light-theme {
+            background-color: #f4f4f4;
+            color: #000;
+        }
+        .light-theme header {
+            background: #333;
+            color: #fff;
+        }
+        .light-theme .theme-toggle-button {
+            background: #333;
+            color: #fff;
+        }
+        .light-theme section {
+            background: #fff;
+            color: #000;
+        }
+        .light-theme .collapsible {
+            background: #333;
+            color: #fff;
+        }
+        .light-theme .collapsible:hover {
+            background-color: #555;
+        }
+        .light-theme .content {
+            background-color: #f4f4f4;
+            color: #000;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Beginner's Guide to Street Fighter 6</h1>
+        <button class="theme-toggle-button" onclick="toggleTheme()">Switch Theme</button>
+    </header>
+    <div class="container">
+
+        <section id="glossary">
+            <button class="collapsible">Glossary</button>
+            <div class="content">
+                <ul>
+                    <li><strong>Neutral:</strong> The state of play in which neither players are attacking, blocking an attack, or jumping (both characters are free to act in any way).</li>
+                    <li><strong>Interaction:</strong> This refers to the state where a player has initiated an attack against the opponent. The interaction ends when the players return to neutral.</li>
+                    <li><strong>Turn:</strong> While it may be unintuitive at first, fighting games are turn based. During an interaction, whoever has the frame advantage (can act first), has the turn.</li>
+                    <li><strong>Hitbox:</strong> The zone(s) that checks for overlap with a hurtbox. If overlap occurs, the opponent is considered hit.</li>
+                    <li><strong>Hurtbox:</strong> The zone(s) that check for overlap with a hitbox. If your hurtbox overlaps with the opponent's hitbox, you are considered hit.</li>
+                    <li><strong>Startup:</strong> The amount of frames after pressing a button before a hitbox appears.</li>
+                    <li><strong>Active:</strong> Frames where a hitbox is in play.</li>
+                    <li><strong>Counter:</strong> Hit connects while the opponent is in startup or active frames of an attack.</li>
+                    <li><strong>Punish Counter:</strong> Hit connects while the opponent is in recovery frames of an attack.</li>
+                    <li><strong>Anti Air:</strong> A move used to counter a jump in attack.</li>
+                    <li><strong>Air Invincibility:</strong> A special type of hurtbox that only checks for grounded attacks. Very important for anti airing.</li>
+                    <li><strong>Normal:</strong> Attacks that are executed by a single button press.</li>
+                    <li><strong>Special:</strong> Attacks that are executed by a motion input, followed by a button press.</li>
+                    <li><strong>Command Normal:</strong> Attacks that are executed by a direction and a button. While crouching normals fit this definition, they are referred to as "crouching normals."</li>
+                    <li><strong>DP (Dragon Punch):</strong> Universal term for an uppercut special.</li>
+                </ul>
+                <button class="collapsible">Advanced</button>
+                <div class="content">
+                    <ul>
+                        <li><strong>Footsies:</strong> An expansion on neutral where both players are trying to manage their spacing and expose a weakness in the opponent's defense, typically with a low normal.</li>
+                        <li><strong>Mental Stack:</strong> The number of strategies the player can focus on at one time. Focusing on a potential strategy the opponent may execute enables the player to react to it significantly easier.</li>
+                        <li><strong>Conditioning:</strong> Repeating a strategy so the opponent starts to assume the strategy will be used at the next viable opportunity.</li>
+                        <li><strong>Mixup:</strong> A situation where the offensive player has multiple attack options which require different defensive actions.</li>
+                        <li><strong>50/50:</strong> A common type of mixup which presents 2 offensive options that require commitment to defend against. An example of a 50/50 would be strike (block) or a command throw (jump).</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="gameplan">
+            <button class="collapsible">Game Plan</button>
+            <div class="content">
+                <h3>Pure Defensive Play (PDP)</h3>
+                <p>Don't pay attention to health bars. The points don't matter. Don't allow your decisions to be affected by the health bars.</p>
+                <ul>
+                    <li>While the opponent is grounded, only attack if you are guaranteed a punish counter.</li>
+                    <li>When the opponent jumps into your space, counter with an anti air.</li>
+                    <li>Throw when the opponent is in range. If you are in the corner, backthrow to get out of the corner. This eliminates the concerns of getting hit by a DI wallsplat.</li>
+                    <li>DI is exclusively a counter measure. Never use it offensively or on prediction.</li>
+                    <li>You should only move your character with the intention of getting in the correct range to anti air a jump in.</li>
+                    <li>Block low unless they jump or if you recognize an overhead attack.</li>
+                    <li>Never jump.</li>
+                    <li>If the opponent gains a life lead and goes full screen for the timeout, let them. Use the time to practice specials/supers. Remember: you are there for your own development, not the rank points. The points don't matter.</li>
+                </ul>
+                <p>While PDP will often lead to dull stalemate scenarios, the purpose is not to win. It's to build knowledge of the game's characters so you can identify punish windows, deploy the correct defensive options, and to learn how to recognize player patterns. The secondary purpose is an introduction to neutral and footsies via your anti air spacing.</p>
+                <p>PDP has no way to counter zoners or grapplers.</p>
+                <p>PDP is entirely about observation and reaction. No attempts to pre-empt opponent actions should be made.</p>
+            </div>
+        </section>
+
+        <section id="modifiers">
+            <button class="collapsible">Modifiers to Game Plan</button>
+            <div class="content">
+                <ul>
+                    <li>Introduction of combos for punish counter extensions.</li>
+                    <li>Replacing 2HP with DP. While the input is more difficult, the introduction of aerial invincibility means you actually have more time to execute and will significantly reduce the chance of getting counter hit.</li>
+                    <li>Besides DP, all specials and supers will only be used mid combo.</li>
+                    <li>Delay tech.</li>
+                    <li>Parrying when the opponent does a fireball or a super (parry is to be used as a reaction block, not a pre-emptive one).</li>
+                    <li>Whiff punish.</li>
+                    <li>Use of a fast normal when the opponent tries to walk into your space (normally 2MK).</li>
+                </ul>
+                <p>When you are able to use this game plan to consistently win the interactions it's intended for, while also applying the modifiers, a new game plan (with a more offensive focus) will be introduced.</p>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var coll = document.getElementsByClassName("collapsible");
+            for (var i = 0; i < coll.length; i++) {
+                coll[i].addEventListener("click", function() {
+                    this.classList.toggle("active");
+                    var content = this.nextElementSibling;
+                    if (content.style.display === "block") {
+                        content.style.display = "none";
+                    } else {
+                        content.style.display = "block";
+                    }
+                });
+            }
+        });
+
+        function toggleTheme() {
+            document.body.classList.toggle("light-theme");
+        }
+    </script>
+</body>
+</html>
