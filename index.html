@@ -127,7 +127,6 @@
             <button class="collapsible">Glossary</button>
             <div class="content">
                 <ul>
-                    <li><strong>Neutral:</strong> The state of play in which neither players are attacking, blocking an attack, or jumping (both characters are free to act in any way).</li>
                     <li><strong>Startup:</strong> The amount of frames after pressing a button before a hitbox appears.</li>
                     <li><strong>Active:</strong> Frames where a hitbox is in play.</li>
                     <li><strong>Recovery:</strong> The amount of frames after an attack before the player can act again.</li>
@@ -141,6 +140,11 @@
             <button class="collapsible">Intermediate</button>
                 <div class="content">
                     <ul>
+                        <li><strong>Neutral:</strong> This is context specific and has two definitions
+                        <ul>
+                            <li>The state of play in which neither players are attacking, blocking an attack, or jumping (both characters are free to act in any way).</li>
+                            <li>The singular form which is the player state where they are free to act eg. they finished their recovery frames so returned to neutral.</li>
+                        </ul>
                         <li><strong>Hitbox:</strong> The zone(s) that checks for overlap with a hurtbox. If overlap occurs, the opponent is considered hit.</li>
                         <li><strong>Hurtbox:</strong> The zone(s) that check for overlap with a hitbox. If your hurtbox overlaps with the opponent's hitbox, you are considered hit.</li>
                         <li><strong>Interaction:</strong> This refers to the state where a player has initiated an attack against the opponent. The interaction ends when the players return to neutral.</li>
