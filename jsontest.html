@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Guide to Street Fighter 6</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #000;
+            color: #fff;
+            transition: all 0.5s ease;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding: 1rem 0;
+            text-align: center;
+            position: relative;
+        }
+        .theme-toggle-button {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: #333;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background 0.5s ease, color 0.5s ease;
+        }
+        section {
+            margin: 20px 0;
+            padding: 20px;
+            background: #000;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+            transition: background 0.5s ease, color 0.5s ease;
+        }
+        h2 {
+            color: #fff;
+        }
+        .collapsible {
+            background: #333;
+            color: #fff;
+            cursor: pointer;
+            padding: 10px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 18px;
+            transition: background 0.5s ease, color 0.5s ease;
+        }
+        .active, .collapsible:hover {
+            background-color: #555;
+        }
+        .content {
+            padding: 0 18px;
+            display: none;
+            overflow: hidden;
+            background-color: #000;
+            transition: background 0.5s ease, color 0.5s ease;
+        }
+        .light-theme {
+            background-color: #f4f4f4;
+            color: #000;
+        }
+        .light-theme header {
+            background: #333;
+            color: #fff;
+        }
+        .light-theme .theme-toggle-button {
+            background: #333;
+            color: #fff;
+        }
+        .light-theme section {
+            background: #fff;
+            color: #000;
+        }
+        .light-theme .collapsible {
+            background: #333;
+            color: #fff;
+        }
+        .light-theme .collapsible:hover {
+            background-color: #555;
+        }
+        .light-theme .content {
+            background-color: #f4f4f4;
+            color: #000;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Beginner's Guide to Street Fighter 6</h1>
+        <button class="theme-toggle-button" onclick="toggleTheme()">Switch Theme</button>
+    </header>
+    <div class="container">
+
+        <section id="glossary">
+            <button class="collapsible">Glossary</button>
+            <div class="content" id="glossary-content">
+                <!-- Glossary content will be loaded here -->
+            </div>
+            <button class="collapsible">Advanced</button>
+            <div class="content" id="advanced-content">
+                <!-- Advanced content will be loaded here -->
+            </div>
+        </section>
+
+        <section id="gameplan">
+            <button class="collapsible">Game Plan</button>
+            <div class="content" id="gameplan-content">
+                <!-- Game plan content will be loaded here -->
+            </div>
+        </section>
+
+        <section id="modifiers">
+            <button class="collapsible">Modifiers to Game Plan</button>
+            <div class="content" id="modifiers-content">
+                <!-- Modifiers content will be loaded here -->
+            </div>
+        </section>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var coll = document.getElementsByClassName("collapsible");
+            for (var i = 0; i < coll.length; i++) {
+                coll[i].addEventListener("click", function() {
+                    this.classList.toggle("active");
+                    var content = this.nextElementSibling;
+                    if (content.style.display === "block") {
+                        content.style.display = "none";
+                    } else {
+                        content.style.display = "block";
+                    }
+                });
+            }
+
+            fetch('content.json')
+                .then(response => response.json())
+                .then(data => {
+                    loadGlossary(data.glossary, 'glossary-content');
+                    loadGlossary(data.advanced, 'advanced-content');
+                    loadGamePlan(data.gamePlan, 'gameplan-content');
+                    loadGamePlan(data.modifiers, 'modifiers-content');
+                });
+        });
+
+        function loadGlossary(items, elementId) {
+            const container = document.getElementById(elementId);
+            let content = '<ul>';
+            items.forEach(item => {
+                content += `<li><strong>${item.term}:</strong> ${item.definition}</li>`;
+            });
+            content += '</ul>';
+            container.innerHTML = content;
+        }
+
+        function loadGamePlan(plan, elementId) {
+            const container = document.getElementById(elementId);
+            let content = `<h3>${plan.title}</h3><p>${plan.description}</p><ul>`;
+            plan.points.forEach(point => {
+                content += `<li>${point}</li>`;
+            });
+            content += '</ul>';
+            if (plan.additionalInfo) {
+                plan.additionalInfo.forEach(info => {
+                    content += `<p>${info}</p>`;
+                });
+            }
+            container.innerHTML = content;
+        }
+
+        function toggleTheme() {
+            document.body.classList.toggle("light-theme");
+        }
+    </script>
+</body>
+</html>
