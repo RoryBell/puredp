@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,11 +15,13 @@
             color: #fff;
             transition: all 0.5s ease;
         }
+
         .container {
             width: 95%;
             margin: auto;
             overflow: hidden;
         }
+
         header {
             background: #333;
             color: #fff;
@@ -26,6 +29,7 @@
             text-align: center;
             position: relative;
         }
+
         .theme-toggle-button {
             position: absolute;
             top: 10px;
@@ -38,6 +42,7 @@
             border-radius: 5px;
             transition: background 0.5s ease, color 0.5s ease;
         }
+
         section {
             margin: 10px 0;
             padding: 10px;
@@ -46,9 +51,11 @@
             box-shadow: 0 0 2px rgba(255, 255, 255, 0.1);
             transition: background 0.5s ease, color 0.5s ease;
         }
+
         h2 {
             color: #fff;
         }
+
         .collapsible {
             background: #333;
             color: #fff;
@@ -61,9 +68,12 @@
             font-size: 18px;
             transition: background 0.5s ease, color 0.5s ease;
         }
-        .active, .collapsible:hover {
+
+        .active,
+        .collapsible:hover {
             background-color: #555;
         }
+
         .content {
             padding: 0 18px;
             display: none;
@@ -71,68 +81,106 @@
             background-color: #000;
             transition: background 0.5s ease, color 0.5s ease;
         }
+
         .light-theme {
             background-color: #f4f4f4;
             color: #000;
         }
+
         .light-theme header {
             background: #333;
             color: #fff;
         }
+
         .light-theme .theme-toggle-button {
             background: #333;
             color: #fff;
         }
+
         .light-theme section {
             background: #fff;
             color: #000;
         }
+
         .light-theme .collapsible {
             background: #333;
             color: #fff;
         }
+
         .light-theme .collapsible:hover {
             background-color: #555;
         }
+
         .light-theme .content {
             background-color: #f4f4f4;
             color: #000;
         }
     </style>
 </head>
+
 <body>
     <header>
         <h1>A Guide to Street Fighter 6</h1>
         <button class="theme-toggle-button" onclick="toggleTheme()">Switch Theme</button>
     </header>
     <div class="container">
-<p> Welcome!<br><br>The flow of this guide has been designed with your progression in mind so you shouldn't need to skip ahead. In theory, as long as you are taking the time to implement each element as they are introduced, the next one that is presented to you should be the most relevant to your current needs. Of course, skip ahead if you want to see what's coming, but I wouldn't recommend skipping implementation steps.<br>While this will take genuine work, I believe this structure will give you a massive head start and will prepare you to experience what fighting games have to offer much sooner.</p>
-<p>While this guide is fairly comprehensive as an introduction, you will find yourself in a cycle of rapid improvement followed by sudden plateus. This is a good thing. It just means you need to add another tool to your toolkit to see that improvement again. The idea that you can finish learning a fighting game is madness. There is always knowledge to strive for.<br><br>Good luck, have fun!</p>
+        <p> Welcome!<br><br>The flow of this guide has been designed with your progression in mind so you shouldn't need
+            to skip ahead. In theory, as long as you are taking the time to implement each element as they are
+            introduced, the next one that is presented to you should be the most relevant to your current needs. Of
+            course, skip ahead if you want to see what's coming, but I wouldn't recommend skipping implementation
+            steps.<br>While this will take genuine work, I believe this structure will give you a massive head start and
+            will prepare you to experience what fighting games have to offer much sooner.</p>
+        <p>While this guide is fairly comprehensive as an introduction, you will find yourself in a cycle of rapid
+            improvement followed by sudden plateus. This is a good thing. It just means you need to add another tool to
+            your toolkit to see that improvement again. The idea that you can finish learning a fighting game is
+            madness. There is always knowledge to strive for.<br><br>Good luck, have fun!</p>
         <section id="gameplan">
             <button class="collapsible">Game Plan</button>
             <div class="content">
                 <h3>Pure Defensive Play (PDP)</h3>
-<p>While PDP will often lead to dull stalemate scenarios, the purpose is not to win. It's to build knowledge of the game's characters so you can identify punish windows, deploy the correct defensive options, and to learn how to recognize player patterns. In any well made fighting games, every action has an intended counter. If you can work out what your options are for most scenarios, your defense will be unbreakable.
-<br>The secondary purpose of PDP is to act as an introduction to neutral and footsies via your anti air spacing.</p>
-<p>PDP is entirely about observation and reaction. While you will naturally start to see patterns and begin predicting the opponent's moves, acting on prediction is not a part of the gameplan.
-Only react.</p>
-                <p>Don't pay attention to health bars. The points don't matter. Don't allow your decisions to be affected by the health bars.</p>
+                <p>While PDP will often lead to dull stalemate scenarios, the purpose is not to win. It's to build
+                    knowledge of the game's characters so you can identify punish windows, deploy the correct defensive
+                    options, and to learn how to recognize player patterns. In any well made fighting games, every
+                    action has an intended counter. If you can work out what your options are for most scenarios, your
+                    defense will be unbreakable.
+                    <br>The secondary purpose of PDP is to act as an introduction to neutral and footsies via your anti
+                    air spacing.
+                </p>
+                <p>PDP is entirely about observation and reaction. While you will naturally start to see patterns and
+                    begin predicting the opponent's moves, acting on prediction is not a part of the gameplan.
+                    Only react.</p>
+                <p>Don't pay attention to health bars. The points don't matter. Don't allow your decisions to be
+                    affected by the health bars.</p>
                 <ul>
-<li>Never jump.</li>
-<li>Block low unless they jump or if you recognize an overhead attack.</li>
-<li>You should only move your character with the intention of getting in the correct range to anti air a jump in.</li>
-<li>Punish using a normal.
-                    <li>While the opponent is grounded, only attack if you are guaranteed a punish counter. If "Punish Counter" doesn't appear, you attacked too late. If "Counter" appears, you were still too late and the opponent tried to start an attack</li>                    
-                    <li>When the opponent jumps into your space, counter with an anti air. If you get hit, you need to start your attack earlier</li>
-                    <li>Throw when the opponent is in range. If you are in the corner, backthrow to get out of the corner. This eliminates the concerns of getting hit by a DI wallsplat.</li>
-                    <li>DI is exclusively a counter measure. Never use it offensively or on prediction.</li>                   
-                    <li>Besides DP, all specials and supers will only be used mid combo.</li>                    
-                    <li>If the opponent gains a life lead and goes full screen for the timeout, let them. Use the time to practice specials/supers. Remember: you are there for your own development, not the rank points. The points don't matter.<br>With this mentality, you will actually climb the ranks faster as you will improve enough to keep the points you earn.</li>
+                    <li>Never jump.</li>
+                    <li>Block low unless they jump or if you recognize an overhead attack.</li>
+                    <li>You should only move your character with the intention of getting in the correct range to anti
+                        air a jump in.</li>
+                    <li>Punish using a normal.
+                    <li>While the opponent is grounded, only attack if you are guaranteed a punish counter. If "Punish
+                        Counter" doesn't appear, you attacked too late. If "Counter" appears, you were still too late
+                        and the opponent tried to start an attack</li>
+                    <li>When the opponent jumps into your space, counter with an anti air. If you get hit, you need to
+                        start your attack earlier</li>
+                    <li>Throw when the opponent is in range. If you are in the corner, backthrow to get out of the
+                        corner. This eliminates the concerns of getting hit by a DI wallsplat.</li>
+                    <li>DI is exclusively a counter measure. Never use it offensively or on prediction.</li>
+                    <li>Besides DP, all specials and supers will only be used mid combo.</li>
+                    <li>If the opponent gains a life lead and goes full screen for the timeout, let them. Use the time
+                        to practice specials/supers. Remember: you are there for your own development, not the rank
+                        points. The points don't matter.<br>With this mentality, you will actually climb the ranks
+                        faster as you will improve enough to keep the points you earn.</li>
                 </ul>
-                <p>Your punish counters should be a normal rather than a throw. The first gameplan modifier will make use of this rule.</p>
-                <p>At first you will find you can only punish big, high commitment specials/supers. As your knowledge of the character's movesets increases, you will start to identify when their blocked normals are punishable. The first examples of this you should observe are sweeps. Finding these opportunities is key to learning character matchups.</p>
-                <p>PDP has no way to counter grapplers. This is because grapplers require prediction to beat. As prediction is banned...grapplers will beat you!</p>
-                <p>When you feel comfortable with all the elements of this plan, pick a modifier to introduce to your gameplan. Only choose 1 at a time so you can focus on integrating the modifier fully.</p>
+                <p>Your punish counters should be a normal rather than a throw. The first gameplan modifier will make
+                    use of this rule.</p>
+                <p>At first you will find you can only punish big, high commitment specials/supers. As your knowledge of
+                    the character's movesets increases, you will start to identify when their blocked normals are
+                    punishable. The first examples of this you should observe are sweeps. Finding these opportunities is
+                    key to learning character matchups.</p>
+                <p>PDP has no way to counter grapplers. This is because grapplers require prediction to beat. As
+                    prediction is banned...grapplers will beat you!</p>
+                <p>When you feel comfortable with all the elements of this plan, pick a modifier to introduce to your
+                    gameplan. Only choose 1 at a time so you can focus on integrating the modifier fully.</p>
             </div>
         </section>
 
@@ -140,188 +188,335 @@ Only react.</p>
             <button class="collapsible">Modifiers to Game Plan</button>
             <div class="content">
                 <ul>
-<button class="collapsible">Combos - First Modifier</button>
-                <div class="content">
-                    <p>Use combos for punish counter extensions. Start with cancelling your punish counter normal into a fireball. As you get more comfortable, increase the complexity. Here are demonstrations of some combos. There are countless more you could learn, but these will help get you started.<p>
-<button class="collapsible">Basic Combos</button>
-                <div class="content">
-<p>These are some basic damage extensions for when you land a punish counter. Capitalising on winning an interaction is key to winning a round.</p>
-<p>5HP cancel 236P</p>
-<p>5HP cancel 214LK link 623HP</p>
-<p>5HK link 2HP cancel 214LK link 623HP</p>
-</div>
-</div>
-<button class="collapsible">Super Art Combos</button>
-                <div class="content">
-<p>When you are comfortable with the basics combos, you can get a further extension using a Super Art. These are typically used as combo enders.</p>
-<p>HP cancel 214LK link 236236P</p>
-<p>5HK link 2HP cancel 214LK link 623LP cancel 236236K<br>A trick to make this combo easier is that the final part of your input for the light DP counts as the first quarter circle for the super. So after the DP just do 236P to cancel into the super.</p>
-<button class="collapsible">Raging Demon Combo</button>
-                <div class="content">
-<p>To do the raging demon, you need to be at 25% health or less (same requirement for a critical art. Akuma effectively had 2 critical arts). This is a very simple combo but it does massive damage.</p>
-<p>5HK link LP LP 6 LK HP</p>
-</div>
-</div>
-<p>Move on to the next modifier when you can do these combos consistently</p>
-</div>
-<button class="collapsible">DP Anti Air - Second Modifier</button>
-                <div class="content">
-                    <p>Replace 2HP with DP for anti airing.</p>
+                    <button class="collapsible">Combos - First Modifier</button>
+                    <div class="content">
+                        <p>Use combos for punish counter extensions. Start with cancelling your punish counter normal
+                            into a fireball. As you get more comfortable, increase the complexity. Here are
+                            demonstrations of some combos. There are countless more you could learn, but these will help
+                            get you started.
+                        <p>
+                            <button class="collapsible">Basic Combos</button>
+                        <div class="content">
+                            <p>These are some basic damage extensions for when you land a punish counter. Capitalising
+                                on winning an interaction is key to winning a round.</p>
+                            <p>5HP cancel 236P</p>
+                            <p>5HP cancel 214LK link 623HP</p>
+                            <p>5HK link 2HP cancel 214LK link 623HP</p>
+                        </div>
+                        <button class="collapsible">Super Art Combos</button>
+                        <div class="content">
+                            <p>When you are comfortable with the basics combos, you can get a further extension using a
+                                Super Art. These are typically used as combo enders.</p>
+                            <p>HP cancel 214LK link 236236P</p>
+                            <p>5HK link 2HP cancel 214LK link 623LP cancel 236236K<br>A trick to make this combo easier
+                                is
+                                that the final part of your input for the light DP counts as the first quarter circle
+                                for
+                                the super. So after the DP just do 236P to cancel into the super.</p>
+                            <button class="collapsible">Raging Demon Combo</button>
+                            <div class="content">
+                                <p>To do the raging demon, you need to be at 25% health or less (same requirement for a
+                                    critical art. Akuma effectively had 2 critical arts). This is a very simple combo
+                                    but it
+                                    does massive damage.</p>
+                                <p>5HK link LP LP 6 LK HP</p>
+                            </div>
+                        </div>
+                        <p>Move on to the next modifier when you can do these combos consistently</p>
+                    </div>
+                    <button class="collapsible">DP Anti Air - Second Modifier</button>
+                    <div class="content">
+                        <p>Replace 2HP with DP for anti airing.</p>
 
-<p>From the start, you were told to use 2HP to anti air. This isn't a bad option as it's a very simple input that provides a small amount of air invincibility and a suitably placed hitbox with decent damage.</p>
-<p>Light green is a regular hurtbox, dark green is an air invincible hurtbox, red is a hitbox</p>
-<img src="akuma-cr-hp.gif" style="width:100%" loading="lazy">
-<p>You have a better option.</p>
-<p>Light DP instantly provides total air invincibility from frame 1. The startup is nearly halved, the hitbox is larger and more consistently placed throughout the move while also staying active for a bit longer, and the damage is increased.</p>
-<img src="akuma-lp-shoryuken.gif" style="width:100%" loading="lazy">
-<p>This is a significant upgrade. While it is more difficult to perform, with practise the difference will be negligible. Because it's air invincible from frame 1, it actually gives you more time to execute while eliminating concerns of getting counter hit.
-<p>Move on when your anti airing is consistently better than when you used 2HP</p>
-</div>
-<button class="collapsible">Parry - Third Modifier</button>
-                <div class="content">
-                    <p>Use parry when the opponent does a fireball, slow special, a DI, or a super. Parry is to be used as a reaction block, not a pre-emptive one. This should be your third modifier.</p>
-                    <ul>
-                        <p>Parry has the same block stun as if you did a regular block. The benefits are not losing drive guage (you actually build drive guage when parrying hits), no wallsplat if you absorb a DI, and a chance at getting a perfect parry. When you perfect parry (it's a 2 frame window, so very difficult to do deliberately), you reset to neutral immediately but any damage you do as a punish counter starts with a 50% penalty. A reasonable trade off for stealing a turn.</p>
-                        <p>The main reason it's so important to only parry on reaction is because if you get thrown while in the parry state, you take +70% damage when compared to a normal throw. This happens because throwing a parry gets treated as a punish counter. The recovery frames for a parry that isn't in blockstun add up to just over half a second. In Street Fighter, half a second feels like forever.</p>
-                    </ul>
-</div>
-<button class="collapsible">Delay Tech - Fourth Modifier</button>
-                <div class="content">
-                    <p>Learn how to block while doing a delayed throw tech to cover a 50/50 mixup. It covers you from getting struck by a meaty, and being thrown. This can be achieved in a single training session using the premade throwing scenario in training mode. Once you know, you know</p>
-</div>
-<button class="collapsible">Drive Rush Cancel (DRC) - Fifth Modifier</button>
-                <div class="content">
-                    <p>Any cancellable normals can make use of a DRC to extend combos at the cost of 3 bars. You have two choices of inputs for a DRC, dash or MP+MK. For now Drive Rush is only to be used for combo extensions.<p>
-<p>The move you DRC into gains additional frame advantage (the opponent will be in Hitstun for longer) which opens up new combo routes</p>
-</div>
-<button class="collapsible">Teacher's Pet Modifiers</button>
-                <div class="content">
-                    <li>Learn the rest of your main character's moves. This will be the most time intensive task, but slowly building a full understanding of your character's toolkit will open up punish and combo opportunities. Integrating the moves one at a time will enable you to understand the intended use case for each move.</li>
-                    <li>Drive Rush Counter. When the opponent tries to drive rush, use a light normal to hit them first.</li>
-                    <li>Whiff punish. When you can consistently stay just outside of the opponent's strike range, react to their button with a button of your own to punish.</li>
-                    <li>Use of a fast normal when the opponent tries to walk into your space (normally a crouching medium attack). As this is a shift towards offensive play, this should be the final modifier.</li>
-                </div>
-<button class="collapsible">Drive System Counters</button>
-                <div class="content">
-                <li>Parry: Throwing is your best answer. It's considered a punish counter so you will get more damage from a throw if you bait a parry first.</li>
-                <li>Rush: Players often abuse this to attempt skipping neutral. Simply use a light normal to stop them.</li>
-                <li>Impact: This requires the most situational awareness to respond to. If you are cornered, you are at risk of wall splat. If you are cornered and burned out, you are at risk of getting stunned. Your options are:
-<ul>
-<li>Counter Drive Impact. Make sure you have enough health to absorb the initial hit</li>
-<li>Parry. Unlike regular blocking, you won't get wall splat if you parry. you also have a chance to perfect parry to steal the turn</li>
-<li>Throw</li>
-<li>Armour Break either manually by doing a fast 3 hit combo, or by using an armour breaking move such as a super</li>
-</ul>
-</li>
-</div>
-                <p>When you are able to use this game plan to consistently win the interactions it's intended for, while also applying the modifiers, a new game plan (with a more offensive focus) will be introduced.</p>
+                        <p>From the start, you were told to use 2HP to anti air. This isn't a bad option as it's a very
+                            simple
+                            input that provides a small amount of air invincibility and a suitably placed hitbox with
+                            decent
+                            damage.</p>
+                        <p>Light green is a regular hurtbox, dark green is an air invincible hurtbox, red is a hitbox
+                        </p>
+                        <img src="akuma-cr-hp.gif" style="width:100%" loading="lazy">
+                        <p>You have a better option.</p>
+                        <p>Light DP instantly provides total air invincibility from frame 1. The startup is nearly
+                            halved, the
+                            hitbox is larger and more consistently placed throughout the move while also staying active
+                            for a
+                            bit longer, and the damage is increased.</p>
+                        <img src="akuma-lp-shoryuken.gif" style="width:100%" loading="lazy">
+                        <p>This is a significant upgrade. While it is more difficult to perform, with practise the
+                            difference
+                            will be negligible. Because it's air invincible from frame 1, it actually gives you more
+                            time to
+                            execute while eliminating concerns of getting counter hit.
+                        <p>Move on when your anti airing is consistently better than when you used 2HP</p>
+                    </div>
+                    <button class="collapsible">Parry - Third Modifier</button>
+                    <div class="content">
+                        <p>Use parry when the opponent does a fireball, slow special, a DI, or a super. Parry is to be
+                            used as a
+                            reaction block, not a pre-emptive one. This should be your third modifier.</p>
+                        <ul>
+                            <p>Parry has the same block stun as if you did a regular block. The benefits are not losing
+                                drive
+                                guage (you actually build drive guage when parrying hits), no wallsplat if you absorb a
+                                DI, and
+                                a chance at getting a perfect parry. When you perfect parry (it's a 2 frame window, so
+                                very
+                                difficult to do deliberately), you reset to neutral immediately but any damage you do as
+                                a
+                                punish counter starts with a 50% penalty. A reasonable trade off for stealing a turn.
+                            </p>
+                            <p>The main reason it's so important to only parry on reaction is because if you get thrown
+                                while in
+                                the parry state, you take +70% damage when compared to a normal throw. This happens
+                                because
+                                throwing a parry gets treated as a punish counter. The recovery frames for a parry that
+                                isn't in
+                                blockstun add up to just over half a second. In Street Fighter, half a second feels like
+                                forever.</p>
+                        </ul>
+                    </div>
+                    <button class="collapsible">Delay Tech - Fourth Modifier</button>
+                    <div class="content">
+                        <p>Learn how to block while doing a delayed throw tech to cover a 50/50 mixup. It covers you
+                            from
+                            getting struck by a meaty, and being thrown. This can be achieved in a single training
+                            session using
+                            the premade throwing scenario in training mode. Once you know, you know</p>
+                    </div>
+                    <button class="collapsible">Drive Rush Cancel (DRC) - Fifth Modifier</button>
+                    <div class="content">
+                        <p>Any cancellable normals can make use of a DRC to extend combos at the cost of 3 bars. You
+                            have two
+                            choices of inputs for a DRC, dash or MP+MK. For now Drive Rush is only to be used for combo
+                            extensions.
+                        <p>
+                        <p>The move you DRC into gains additional frame advantage (the opponent will be in Hitstun for
+                            longer)
+                            which opens up new combo routes</p>
+                    </div>
+                    <button class="collapsible">Teacher's Pet Modifiers</button>
+                    <div class="content">
+                        <li>Learn the rest of your main character's moves. This will be the most time intensive task,
+                            but slowly
+                            building a full understanding of your character's toolkit will open up punish and combo
+                            opportunities. Integrating the moves one at a time will enable you to understand the
+                            intended use
+                            case for each move.</li>
+                        <li>Drive Rush Counter. When the opponent tries to drive rush, use a light normal to hit them
+                            first.
+                        </li>
+                        <li>Whiff punish. When you can consistently stay just outside of the opponent's strike range,
+                            react to
+                            their button with a button of your own to punish.</li>
+                        <li>Use of a fast normal when the opponent tries to walk into your space (normally a crouching
+                            medium
+                            attack). As this is a shift towards offensive play, this should be the final modifier.</li>
+                    </div>
+                    <button class="collapsible">Drive System Counters</button>
+                    <div class="content">
+                        <li>Parry: Throwing is your best answer. It's considered a punish counter so you will get more
+                            damage
+                            from a throw if you bait a parry first.</li>
+                        <li>Rush: Players often abuse this to attempt skipping neutral. Simply use a light normal to
+                            stop them.
+                        </li>
+                        <li>Impact: This requires the most situational awareness to respond to. If you are cornered, you
+                            are at
+                            risk of wall splat. If you are cornered and burned out, you are at risk of getting stunned.
+                            Your
+                            options are:
+                            <ul>
+                                <li>Counter Drive Impact. Make sure you have enough health to absorb the initial hit
+                                </li>
+                                <li>Parry. Unlike regular blocking, you won't get wall splat if you parry. you also have
+                                    a
+                                    chance to perfect parry to steal the turn</li>
+                                <li>Throw</li>
+                                <li>Armour Break either manually by doing a fast 3 hit combo, or by using an armour
+                                    breaking
+                                    move such as a super</li>
+                            </ul>
+                        </li>
+                    </div>
+                    <p>When you are able to use this game plan to consistently win the interactions it's intended for,
+                        while
+                        also applying the modifiers, a new game plan (with a more offensive focus) will be introduced.
+                    </p>
 
-<button class="collapsible">Master Rank Shortcut</button>
-            <div class="content">
-<p>HA! Got you! This is the frame data section!</p>
-<p>Knowledge of data serves two main
-purposes</p>
-<li>Punish Counters. If an opponent's move whiffs, you can see how long you have to get in with an attack. Or if you block an attack, you can know if you get out of Blockstun before they finish their recovery, providing a window to start your turn.</li>
-<li>Combos. Having a database of the startup, cancel types (can it cancel into a special? super?), and Hitstun for all moves trivialises building combos.<br>Choosing a move to initiate an attack can be greatly informed by the combo routes you learn to maximise your damage output. Optimising for the most common scenarios means you will need to win fewer interactions to win a round.</li>
-<p>If you want to improve your knowledge fast, the best way is to utilise frame data tools. The barrier to entry is so much lower than it may seem.</p>
-<p>Keeping a log of moves you struggled to deal with can prove invaluable. Pairing this log with a frame data tool such as <a href="https://ultimateframedata.com/sf6/" target="_blank">Ultimate Frame Data</a>, which has a gif of each move, along with visualised hitboxes and frame data, to help you identify a way to counter a particular move which eliminates the much slower trial and error phase.</p>
-                <p>Frame data may seem needlessly nerdy rabbit hole, but if used correctly, your time spent accessing frame data tools is very brief. You have a specific question you want answered, go in, get the answer, get out. The upfront intimidation from all the information will fall away when you realise how much faster it makes learning character matchups and your own character.</p>
-              <p>Trying to store all of the data in your head is a waste of time. Use frame data tools to answer specific questions as they arise, and over time you will build an intuitive understanding of all character's strengths and weaknesses</p>
-</div>
+                    <button class="collapsible">Master Rank Shortcut</button>
+                    <div class="content">
+                        <p>HA! Got you! This is the frame data section!</p>
+                        <p>Knowledge of data serves two main
+                            purposes</p>
+                        <li>Punish Counters. If an opponent's move whiffs, you can see how long you have to get in with
+                            an
+                            attack. Or if you block an attack, you can know if you get out of Blockstun before they
+                            finish their
+                            recovery, providing a window to start your turn.</li>
+                        <li>Combos. Having a database of the startup, cancel types (can it cancel into a special?
+                            super?), and
+                            Hitstun for all moves trivialises building combos.<br>Choosing a move to initiate an attack
+                            can be
+                            greatly informed by the combo routes you learn to maximise your damage output. Optimising
+                            for the
+                            most common scenarios means you will need to win fewer interactions to win a round.</li>
+                        <p>If you want to improve your knowledge fast, the best way is to utilise frame data tools. The
+                            barrier
+                            to entry is so much lower than it may seem.</p>
+                        <p>Keeping a log of moves you struggled to deal with can prove invaluable. Pairing this log with
+                            a frame
+                            data tool such as <a href="https://ultimateframedata.com/sf6/" target="_blank">Ultimate
+                                Frame
+                                Data</a>, which has a gif of each move, along with visualised hitboxes and frame data,
+                            to help
+                            you identify a way to counter a particular move which eliminates the much slower trial and
+                            error
+                            phase.</p>
+                        <p>Frame data may seem needlessly nerdy rabbit hole, but if used correctly, your time spent
+                            accessing
+                            frame data tools is very brief. You have a specific question you want answered, go in, get
+                            the
+                            answer, get out. The upfront intimidation from all the information will fall away when you
+                            realise
+                            how much faster it makes learning character matchups and your own character.</p>
+                        <p>Trying to store all of the data in your head is a waste of time. Use frame data tools to
+                            answer
+                            specific questions as they arise, and over time you will build an intuitive understanding of
+                            all
+                            character's strengths and weaknesses</p>
+                    </div>
             </div>
         </section>
     </div>
-<section id="glossary">
-            <button class="collapsible">Glossary</button>
-            <div class="content">
-                    <ul>
-                    <li><strong>Startup:</strong> The amount of frames after pressing a button before a hitbox appears.</li>
-                    <li><strong>Active:</strong> Frames where a hitbox is in play.</li>
-                    <li><strong>Recovery:</strong> The amount of frames after an attack before the player can act again.</li>
-                    <li><strong>Counter:</strong> Hit connects while the opponent is in startup or active frames of an attack.</li>
-                    <li><strong>Punish Counter:</strong> Hit connects while the opponent is in recovery frames of an attack.</li>
-                    <li><strong>Normal:</strong> Attacks that are executed by a single button press.</li>
-                    <li><strong>Special:</strong> Attacks that are executed by a motion input, followed by a button press.</li>
-                    <li><strong>DP (Dragon Punch):</strong> Universal term for an uppercut special.</li>
-                    <li><strong>Anti Air:</strong> A move used to counter a jump in attack.</li>
-                </ul>
+    <section id="glossary">
+        <button class="collapsible">Glossary</button>
+        <div class="content">
+            <ul>
+                <li><strong>Startup:</strong> The amount of frames after pressing a button before a hitbox appears.</li>
+                <li><strong>Active:</strong> Frames where a hitbox is in play.</li>
+                <li><strong>Recovery:</strong> The amount of frames after an attack before the player can act again.
+                </li>
+                <li><strong>Counter:</strong> Hit connects while the opponent is in startup or active frames of an
+                    attack.</li>
+                <li><strong>Punish Counter:</strong> Hit connects while the opponent is in recovery frames of an attack.
+                </li>
+                <li><strong>Normal:</strong> Attacks that are executed by a single button press.</li>
+                <li><strong>Special:</strong> Attacks that are executed by a motion input, followed by a button press.
+                </li>
+                <li><strong>DP (Dragon Punch):</strong> Universal term for an uppercut special.</li>
+                <li><strong>Anti Air:</strong> A move used to counter a jump in attack.</li>
+            </ul>
             <button class="collapsible">Intermediate</button>
-                <div class="content">
-                    <ul>
-                        <li><strong>Neutral:</strong> This is context specific and has two definitions
+            <div class="content">
+                <ul>
+                    <li><strong>Neutral:</strong> This is context specific and has two definitions
                         <ul>
-                            <li>The state of play in which neither players are attacking, blocking an attack, or jumping (both characters are free to act in any way).</li>
-                            <li>The singular form which is the player state where they are free to act eg. they finished their recovery frames so returned to neutral.</li>
+                            <li>The state of play in which neither players are attacking, blocking an attack, or jumping
+                                (both characters are free to act in any way).</li>
+                            <li>The singular form which is the player state where they are free to act eg. they finished
+                                their recovery frames so returned to neutral.</li>
                         </ul>
-                        <li><strong>Hitbox:</strong> The zone(s) that checks for overlap with a hurtbox. If overlap occurs, the opponent is considered hit.</li>
-                        <li><strong>Hurtbox:</strong> The zone(s) that check for overlap with a hitbox. If your hurtbox overlaps with the opponent's hitbox, you are considered hit.</li>
-                        <li><strong>Interaction:</strong> This refers to the state where a player has initiated an attack against the opponent. The interaction ends when the players return to neutral.</li>
-                        <li><strong>Turn:</strong> While it may be unintuitive at first, fighting games are turn based. During an interaction, whoever has the frame advantage (can act first), has the turn.</li>
-                        <li><strong>Command Normal:</strong> Attacks that are executed by a direction and a button. While crouching normals fit this definition, they are referred to as "crouching normals".</li>
-                        <li><strong>Hitstun:</strong> The number of frames after a player is hit by an attack before they can act again.</li>
-                        <li><strong>Blockstun:</strong> The number of frames after a player blocks an attack before they can act again.</li>
-                        <li><strong>Cancel:</strong> When a second move is executed during the active frames of a cancellable move, the player immediately goes into the startup for the second move, cancelling the remaining active and recovery frames of the first move.</li>
-                        <li><strong>Link:</strong> Describes a type of combo that allows the first attack to recover completely, then get to the active frames of the second attack before the opponents hitstun is over.</li>
-                        <li><strong>Air Invincibility:</strong> A type of hurtbox that ignores aerial attacks. Very important for anti airing.</li>
-                        <li><strong>Projectile Invinciblility:</strong> A type of hurtbox that ignores projectiles. Key component in anti-zoning strategies.</li>
-                        <li><strong>Whiff:</strong> When an attack doesn't make contact with the opponent. Having to wait for the entire animation to play out, without the opponent being in blockstun, leaves you open for a whiff punish</li>
-                        <li><strong>Meaty:</strong> A type of knockdown setup where a player times their attack so the active frames occur on the first frame the opponent is able to act after a knockdown, forcing the opponent to immediately deal with the attack.</li>
-                    </ul>
+                    <li><strong>Hitbox:</strong> The zone(s) that checks for overlap with a hurtbox. If overlap occurs,
+                        the opponent is considered hit.</li>
+                    <li><strong>Hurtbox:</strong> The zone(s) that check for overlap with a hitbox. If your hurtbox
+                        overlaps with the opponent's hitbox, you are considered hit.</li>
+                    <li><strong>Interaction:</strong> This refers to the state where a player has initiated an attack
+                        against the opponent. The interaction ends when the players return to neutral.</li>
+                    <li><strong>Turn:</strong> While it may be unintuitive at first, fighting games are turn based.
+                        During an interaction, whoever has the frame advantage (can act first), has the turn.</li>
+                    <li><strong>Command Normal:</strong> Attacks that are executed by a direction and a button. While
+                        crouching normals fit this definition, they are referred to as "crouching normals".</li>
+                    <li><strong>Hitstun:</strong> The number of frames after a player is hit by an attack before they
+                        can act again.</li>
+                    <li><strong>Blockstun:</strong> The number of frames after a player blocks an attack before they can
+                        act again.</li>
+                    <li><strong>Cancel:</strong> When a second move is executed during the active frames of a
+                        cancellable move, the player immediately goes into the startup for the second move, cancelling
+                        the remaining active and recovery frames of the first move.</li>
+                    <li><strong>Link:</strong> Describes a type of combo that allows the first attack to recover
+                        completely, then get to the active frames of the second attack before the opponents hitstun is
+                        over.</li>
+                    <li><strong>Air Invincibility:</strong> A type of hurtbox that ignores aerial attacks. Very
+                        important for anti airing.</li>
+                    <li><strong>Projectile Invinciblility:</strong> A type of hurtbox that ignores projectiles. Key
+                        component in anti-zoning strategies.</li>
+                    <li><strong>Whiff:</strong> When an attack doesn't make contact with the opponent. Having to wait
+                        for the entire animation to play out, without the opponent being in blockstun, leaves you open
+                        for a whiff punish</li>
+                    <li><strong>Meaty:</strong> A type of knockdown setup where a player times their attack so the
+                        active frames occur on the first frame the opponent is able to act after a knockdown, forcing
+                        the opponent to immediately deal with the attack.</li>
+                </ul>
                 <button class="collapsible">Advanced</button>
                 <div class="content">
                     <ul>
-                        <li><strong>Footsies:</strong> An expansion on neutral where both players are trying to manage their spacing and expose a weakness in the opponent's defense, typically with a low normal.</li>
-                        <li><strong>Mental Stack:</strong> The number of strategies the player can focus on at one time. Focusing on a potential strategy the opponent may execute enables the player to react to it significantly easier.</li>
-                        <li><strong>Conditioning:</strong> Repeating a strategy so the opponent starts to assume the strategy will be used at the next opportunity.</li>
-                        <li><strong>Mixup:</strong> A situation where the offensive player has multiple attack options which require different defensive actions.</li>
-                        <li><strong>50/50:</strong> A common type of mixup which presents 2 offensive options that require commitment to defend against. An example of a 50/50 would be strike (block) or a command throw (jump).</li>
+                        <li><strong>Footsies:</strong> An expansion on neutral where both players are trying to manage
+                            their spacing and expose a weakness in the opponent's defense, typically with a low normal.
+                        </li>
+                        <li><strong>Mental Stack:</strong> The number of strategies the player can focus on at one time.
+                            Focusing on a potential strategy the opponent may execute enables the player to react to it
+                            significantly easier.</li>
+                        <li><strong>Conditioning:</strong> Repeating a strategy so the opponent starts to assume the
+                            strategy will be used at the next opportunity.</li>
+                        <li><strong>Mixup:</strong> A situation where the offensive player has multiple attack options
+                            which require different defensive actions.</li>
+                        <li><strong>50/50:</strong> A common type of mixup which presents 2 offensive options that
+                            require commitment to defend against. An example of a 50/50 would be strike (block) or a
+                            command throw (jump).</li>
                     </ul>
                 </div>
-</div>
-<button class="collapsible">Input Notation</button>
+            </div>
+            <button class="collapsible">Input Notation</button>
             <div class="content">
                 <ul>
                     <p>789<br>456 + Button<br>123</p>
-                    <p>Using a numpad layout to visualise direction inputs makes it much easier to be quickly expressed. The number represents the position of the stick.<br>It assumes the player is facing right and the notation stays the same regardless of player positioning</p>
+                    <p>Using a numpad layout to visualise direction inputs makes it much easier to be quickly expressed.
+                        The number represents the position of the stick.<br>It assumes the player is facing right and
+                        the notation stays the same regardless of player positioning</p>
                     <li>Examples</li>
-                        <ul>
-                            <li>2HP is crouching heavy punch</li>
-                            <li>5HK is standing heavy kick</li>
-                            <li>6MP is forward medium punch</li>
-                            <li>8LP is neutral jump + light punch</li>
-                            <li>9MK is forward jump + medium kick</li>
-</ul>
-<p>This can also be leveraged to express motion inputs using a string of numbers</p>
-<li>Examples</li>
-<ul>
-<li>236HP is heavy fireball</li>
-<li>214MK is medium tatsu</li>
-<li>623LP is light DP</li>
-<li>236236P is level 1 super</li>
-<li>214214P is level 2 super</li>
-<li>236236K is level 3 super</li>
-</ul>
-</div>
-        </section>
-<section id="links">
-            <button class="collapsible">Links</button>
-            <div class="content">
+                    <ul>
+                        <li>2HP is crouching heavy punch</li>
+                        <li>5HK is standing heavy kick</li>
+                        <li>6MP is forward medium punch</li>
+                        <li>8LP is neutral jump + light punch</li>
+                        <li>9MK is forward jump + medium kick</li>
+                    </ul>
+                    <p>This can also be leveraged to express motion inputs using a string of numbers</p>
+                    <li>Examples</li>
+                    <ul>
+                        <li>236HP is heavy fireball</li>
+                        <li>214MK is medium tatsu</li>
+                        <li>623LP is light DP</li>
+                        <li>236236P is level 1 super</li>
+                        <li>214214P is level 2 super</li>
+                        <li>236236K is level 3 super</li>
+                    </ul>
+            </div>
+    </section>
+    <section id="links">
+        <button class="collapsible">Links</button>
+        <div class="content">
 
-<li><a href="https://ultimateframedata.com/sf6/" target="_blank">Ultimate Frame Data</a> is most useful for its included GIFs of each character's moves with visible hitboxes. You can scroll through a move frame by frame to understand how an attack works.</li>
-<li><a href="https://fullmeter.com/fatonline/" target="_blank">FAT</a> is the most complete frame data tool. It's full on at first, but it has all the information you could ever need.</li>
-<p>And finally, for when the road feels too long...
-<audio controls>
-<source src="INDESTRUCTIBLE.mp3" type="audio/mpeg">
-Your browser does not support the audio element.
-</audio>
-<br>You've got this!</p>
-</section>
+            <li><a href="https://ultimateframedata.com/sf6/" target="_blank">Ultimate Frame Data</a> is most useful for
+                its included GIFs of each character's moves with visible hitboxes. You can scroll through a move frame
+                by frame to understand how an attack works.</li>
+            <li><a href="https://fullmeter.com/fatonline/" target="_blank">FAT</a> is the most complete frame data tool.
+                It's full on at first, but it has all the information you could ever need.</li>
+            <p>And finally, for when the road feels too long...
+                <audio controls>
+                    <source src="INDESTRUCTIBLE.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+                <br>You've got this!
+            </p>
+    </section>
 
     <script>
-        document.addEventListener("DOMContentLoaded", function() {
+        document.addEventListener("DOMContentLoaded", function () {
             var coll = document.getElementsByClassName("collapsible");
             for (var i = 0; i < coll.length; i++) {
-                coll[i].addEventListener("click", function() {
+                coll[i].addEventListener("click", function () {
                     this.classList.toggle("active");
                     var content = this.nextElementSibling;
                     if (content.style.display === "block") {
@@ -338,4 +533,5 @@ Your browser does not support the audio element.
         }
     </script>
 </body>
+
 </html>
