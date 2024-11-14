@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Guide to Street Fighter 6</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #000;
+            color: #fff;
+            transition: all 0.5s ease;
+        }
+
+        .container {
+            max-width: 960px; 
+            margin: auto;
+            padding: 20px;
+        }
+
+        header {
+            background: #333;
+            color: #fff;
+            padding: 1rem 0;
+            text-align: center;
+            position: relative;
+        }
+
+        .theme-toggle-button {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.5s ease, color 0.5s ease;
+        }
+
+        section {
+            margin: 10px 0;
+            padding: 10px;
+            background: #000;
+            border-radius: 5px;
+            box-shadow: 0 0 2px rgba(255, 255, 255, 0.1);
+            transition: background 0.5s ease, color 0.5s ease;
+        }
+
+        h2 {
+            color: #fff;
+        }
+
+        .collapsible {
+            background-color: #333;
+            color: #fff;
+            cursor: pointer;
+            padding: 15px; 
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 18px;
+            transition: background-color 0.5s ease, color 0.5s ease;
+        }
+
+        .active,
+        .collapsible:hover {
+            background-color: #555;
+        }
+
+        .content {
+            padding: 0 18px;
+            display: none;
+            overflow: hidden;
+            background-color: #000;
+            transition: background-color 0.5s ease, color 0.5s ease;
+        }
+
+        .light-theme {
+            background-color: #f4f4f4;
+            color: #000;
+        }
+
+        .light-theme header {
+            background-color: #333;
+            color: #fff;
+        }
+
+        .light-theme .theme-toggle-button {
+            background-color: #333;
+            color: #fff;
+        }
+
+        .light-theme section {
+            background-color: #fff;
+            color: #000;
+        }
+
+        .light-theme .collapsible {
+            background-color: #333;
+            color: #fff;
+        }
+
+        .light-theme .collapsible:hover {
+            background-color: #555;
+        }
+
+        .light-theme .content {
+            background-color: #f4f4f4;
+            color: #000;
+        }
+
+        @media screen and (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>A Guide to Street Fighter 6</h1>
+        <button class="theme-toggle-button" onclick="toggleTheme()">Switch Theme</button>
+    </header>
+    <div class="container"> 
+        <section>
+            <button class="collapsible">Intro</button>
+            <div class="content">
+                <p>Welcome!</p>
+                <p>This guide provides the fundamentals of fighting games. You'll be able to apply what you learn here to quickly pick up any other fighting game. Even the mechanics that seem specific to Street Fighter 6 often have an equivalent in other games, serving similar purposes.</p>
+                <p>This guide is designed with your progression in mind, so you shouldn't need to skip ahead. As long as you take the time to implement each element as it is introduced, the next one should be the most relevant to your current needs. You can skip ahead to see what's coming, but I don't recommend skipping the implementation steps.</p>
+                <p>While this will take genuine effort, I believe this structure will give you a massive head start and prepare you to experience what fighting games have to offer much sooner.</p>
+                <p>As you progress, you'll experience a cycle of rapid improvement followed by lengthy plateaus. This is a universal experience. It simply means you need to add another tool to your kit to see improvement again. The idea that you can finish learning a fighting game is madness—there is always more knowledge to strive for.</p>
+                <p>In an earlier version of this guide, I wrote an entire glossary for all the fighting game terminology that comes up. Only after completing it did I realise I should just direct you to the expertly designed and maintained <a href="https://glossary.infil.net/" target="_blank">Fighting Game Glossary</a>. If any words or concepts in this guide are unfamiliar, search for them there.</p>
+                <p>Good luck, have fun!</p>
+            </div>
+        </section>
+
+        <section>
+            <button class="collapsible">Game Plan</button>
+            <div class="content">
+                <h3>Pure Defensive Play (PDP)</h3>
+                <ul>
+                    <li>Never jump.</li>
+                    <li>Block low unless they jump or if you recognize an overhead attack.</li>
+                    <li>Only move your character with the intention of getting into the correct range so you're always ready to anti air a jump in.</li>
+                    <li>While the opponent is grounded, only attack if you are guaranteed a punish counter.</li>
+                    <li>When the opponent jumps into your space, counter with an anti air (2HP).</li>
+                    <li>Throw when the opponent is in range.</li>
+                    <li>DI is exclusively a counter measure. Never use it offensively or on prediction.</li>
+                </ul>
+                <p>While PDP will often lead to dull stalemate scenarios, the purpose is not to win. It's to build knowledge of the game's characters so you can identify punish windows, deploy the correct defensive options, and to learn how to recognize player patterns. In any well-made fighting game, every action has an intended counter. If you can work out what your options are for most scenarios, your defense will become nearly unbreakable.
+                <br>The secondary purpose of PDP is to act as an introduction to neutral and footsies via your anti air spacing.</p>
+                <p>PDP is entirely about observation and reaction. While you will naturally start to see patterns and begin predicting the opponent's moves, acting on prediction is not a part of the gameplan. Only react.</p>
+                <p>Don't pay attention to health bars. The points don't matter. Don't allow your decisions to be affected by the health bars.</p>
+                <p>If the opponent gains a life lead and goes full screen for the timeout, let them. Use the time to practice specials/supers. Remember: you are there for your own development, not the rank points. The points don't matter.<br>With this mentality, you will actually climb the ranks faster as you will improve enough to keep the points you earn.</p>
+                <p>Try to avoid randomly pressing buttons in the hope something will work. Out random-ing the opponent isn't progress you can take ownership of.</p>
+                <p>PDP has no way to counter grapplers. This is because grapplers require prediction to beat. As prediction is banned...grapplers will beat you!</p>
+                <p>When you feel comfortable with all the elements of this plan, pick a modifier to introduce to your gameplan. Only choose 1 at a time so you can focus on integrating the modifier fully.</p>
+            </div>
+        </section>
+
+        <section>
+            <button class="collapsible">Punish Counters</button>
+            <div class="content">
+                               <p>Punish counters are your primary tool for dealing damage. They are performed by hitting the opponent during their recovery frames. Every move has recovery frames, even your own. If you get hit during recovery, you will be interrupted and put into blockstun. You can punish an opponent's move if your attack's startup frames are less than or equal to their recovery frames.</p>
+                <p>In Street Fighter 6, every character has several moves that are 6 frames or faster. These are the ideal moves to use as punish counters as they will beat almost anything. You should learn which of your character's moves are 6 frames, as these will be your primary punishers.</p>
+                <p>To practice, go into training mode and record the dummy to do a move. Then try to punish it with your fastest moves. Once you can do that, record the dummy to do a different move and repeat. You'll quickly learn how punishable each move is.</p>
+                <p>Some moves are too fast to punish with a 6-frame attack. For these moves, you will need to use a 3-frame or 4-frame attack. These are usually your character's throw or unique 3/4 frame attacks.</p>
+                <p>Throws beat everything except a faster button, an invincible move, or another throw. If you can react to an opponent's move and they are in throw range, go for it. You can also use a meaty throw to beat any non-invincible wakeup option.</p>
+                <p>Meaty attacks are performed by timing your attack so that it hits the opponent the moment they wake up. This can be difficult to time, but it's a very powerful tool. If you can master meaty timing, you can control the opponent's wakeup options and force them to block.</p>
+            </div>
+        </section>
+
+        <section>
+            <button class="collapsible">Drive Gauge</button>
+            <div class="content">
+                <p>The Drive Gauge is a resource that you can use to perform various actions. It starts full at the beginning of every round and refills slowly over time. You can also refill it faster by landing attacks or using certain moves.</p>
+                <ul>
+                    <li>Drive Impact: A powerful attack that can absorb one hit. If it hits the opponent, it will wall splat them, allowing you to follow up with a combo.</li>
+                    <li>Overdrive: Enhanced versions of your special moves. They are more powerful and have different properties than their normal versions.</li>
+                    <li>Drive Parry: A defensive technique that allows you to parry any attack, including throws. If you parry an attack perfectly, you will gain a small amount of Drive Gauge back.</li>
+                    <li>Drive Rush: A quick dash that can be used to close the distance or escape pressure. It can also be used to cancel certain moves.</li>
+                </ul>
+                <p>You need to manage your Drive Gauge carefully. If you use too much of it, you will be put into Burnout. In Burnout, you will be unable to use any Drive Gauge moves and your character will be significantly weaker. You will also be vulnerable to a guard break, which will leave you stunned and open to a full combo.</p>
+            </div>
+        </section>
+
+        <section>
+            <button class="collapsible">Defensive Options</button>
+            <div class="content">
+                <ul>
+                    <li>Blocking: The most basic defensive option. You can block high and low attacks. You can also block in the air.</li>
+                    <li>Jumping: You can jump to avoid low attacks and some projectiles. You can also use air attacks to attack the opponent.</li>
+                    <li>Backdashing: A quick way to create distance between you and the opponent. It can also be used to avoid some attacks.</li>
+                    <li>Drive Parry: A defensive technique that allows you to parry any attack, including throws. If you parry an attack perfectly, you will gain a small amount of Drive Gauge back.</li>
+                    <li>V-Shift: A defensive technique that allows you to dodge any attack, including throws. If you V-Shift an attack successfully, you will gain a small amount of frame advantage and can counterattack.</li>
+                </ul>
+                <p>You need to use a variety of defensive options to be successful. Don't just rely on blocking all the time. Use your movement and defensive techniques to create openings and punish the opponent's mistakes.</p>
+            </div>
+        </section>
+
+        <section>
+            <button class="collapsible">Neutral Game</button>
+            <div class="content">
+                <p>The neutral game is the phase of the match where both players are trying to gain an advantage. This is where you will use your movement, spacing, and attacks to try to create an opening and hit the opponent.</p>
+                <ul>
+                    <li>Spacing: You need to be aware of the distance between you and the opponent. You want to be in a position where you can hit them with your attacks, but they can't hit you with theirs.</li>
+                    <li>Footsies: The term used to describe the back-and-forth movement in the neutral game. You will use your movement to try to bait the opponent into making a mistake and then punish them for it.</li>
+                    <li>Whiff Punishing: If the opponent misses an attack, you can punish them with a counterattack. This is a great way to deal damage and gain an advantage.</li>
+                    <li>Conditioning: You can condition the opponent to behave a certain way by punishing them for certain actions. For example, if you keep punishing them for jumping, they will eventually stop jumping.</li>
+                </ul>
+                <p>The neutral game is a complex and ever-changing aspect of fighting games. It takes time and practice to master, but it is essential to success.</p>
+            </div>
+        </section>
+
+        <section>
+            <button class="collapsible">Combos</button>
+            <div class="content">
+                <p>Combos are a series of attacks that are strung together. They are a great way to deal a lot of damage and win the round.</p>
+                <ul>
+                    <li>Gatlings: Certain normal moves can be chained together into a combo. You need to learn which moves gatling into each other for your character.</li>
+                    <li>Target Combos: These are special combos that are unique to each character. They are usually easy to perform and deal a lot of damage.</li>
+                    <li>Drive Rush Cancels: You can use Drive Rush to cancel certain moves and extend your combos. This is a powerful technique that can be used to create devastating combos.</li>
+                </ul>
+                <p>You can practice your combos in training mode. Start with simple combos and then gradually increase the difficulty. You can also find combo videos online for your character.</p>
+            </div>
+        </section>
+
+        <section>
+            <button class="collapsible">Resources</button>
+            <div class="content">
+                <ul>
+                    <li><a href="https://game.capcom.com/cfn/sf6/character/JP/framedata" target="_blank">SF6 Frame Data</a>
+                        shows each character's moves with visible hitboxes. You can scroll through a move frame
+                        by frame to understand how an attack works.</li>
+                    <li><a href="https://fullmeter.com/fatonline/" target="_blank">FAT</a> is the most complete frame data tool.
+                        It's full on at first, but it has all the information you could ever need.</li>
+                </ul>
+                <p>And finally, for when the road feels too long...
+                    <audio controls>
+                        <source src="INDESTRUCTIBLE.mp3" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+                    <br>You've got this!
+                </p>
+            </div>
+        </section>
+
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var coll = document.getElementsByClassName("collapsible");
+            for (var i = 0; i < coll.length; i++) {
+                coll[i].addEventListener("click", function () {
+                    this.classList.toggle("active");
+                    var content = this.nextElementSibling;
+                    if (content.style.display === "block") {
+                        content.style.display = "none";
+                    } else {
+                        content.style.display = "block";
+                    }
+                });
+            }
+        });
+
+        function toggleTheme() {
+            document.body.classList.toggle("light-theme");
+        }
+    </script>
+</body>
+</html>
